@@ -1,0 +1,30 @@
+<app-admin></app-admin>
+<h2> Book List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Book Id</th>
+            <th> Book Name </th>
+            <th> Author Name</th>
+            <th> Publication </th>
+            <th> ISBN</th>
+            <th> Number Of Copies </th>
+            <th> Actions</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let book of books" >
+            <td> {{ book.bookID }} </td>
+            <td> {{ book.bookTitle }} </td>
+            <td> {{ book.authorName }} </td>
+            <td> {{ book.publication }}</td>
+            <td> {{ book.isbn }}</td>
+            <td> {{ book.availableCopies }}</td>
+           
+           
+        </tr>
+    </tbody>
+</table>
+
+

@@ -1,0 +1,33 @@
+<app-admin></app-admin>
+<h2 class='mt-3 mb-3 '> User List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> User Id</th>
+            <th> User Name </th>
+            <th> Email</th>
+            <!-- <th> Password </th> -->
+            <th> User Type</th>
+            <th> Available </th>
+            <th> Operations</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users" >
+            <td> {{ user.userId }} </td>
+            <td> {{ user.userName }} </td>
+            <td> {{ user.email }} </td>
+            <!-- <td> {{ user.password }}</td> -->
+            <td> {{ user.userType }}</td>
+            <td> {{ user.available }}</td>
+            <td>
+                 <button (click) = "updateUser()" class = "btn btn-primary"> Update</button>
+                 <button (click) = "deleteUser(user.userId!)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td> 
+           
+        </tr>
+    </tbody>
+</table>
+
+

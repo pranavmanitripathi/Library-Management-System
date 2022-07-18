@@ -1,0 +1,32 @@
+<app-admin></app-admin>
+<div class="container">
+    <form fxLayoutAlign="25" fxLayout="column" (ngSubmit)="getbookbyuser()">
+        <mat-form-field>
+          <mat-label >Book Name</mat-label>
+          <input type="String" matInput name="bookTitle"  [(ngModel)]="book.bookTitle" placeholder="type the book">
+        </mat-form-field>
+          <button mat-raised-button mat-button type="submit" class="  badge bg-primary text-wrap center " style="width: 5rem; font-size: medium;">Submit</button>
+      </form>
+<h2 class='mt-3 mb-3 '> Users By Book Name</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> User Id</th>
+            <th> User Name </th>
+            <th> Email</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users" >
+            <td> {{ user.userId }} </td>
+            <td> {{ user.userName }} </td>
+            <td> {{ user.email }} </td>
+
+           
+        </tr>
+    </tbody>
+</table>
+</div>
+
+

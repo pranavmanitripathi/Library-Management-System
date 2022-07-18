@@ -1,0 +1,38 @@
+<div class="login mt-5" fxLayoutAlign="center center " fxFlexFill>
+    <mat-card fxFlex="25">
+        <mat-toolbar >Login Page</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" (ngSubmit)="UserLogin()">
+            <mat-form-field >
+              <input matInput placeholder="Email" name ="email" [(ngModel)]="user.email" >
+            </mat-form-field>
+            <mat-form-field >
+                <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="user.password" >
+              </mat-form-field>
+              <button mat-raised-button type="submit" class="  badge bg-primary text-wrap center " style="width: 5rem; font-size: medium; position: relative;
+              top: 2px; left: 75px;"> Login</button>
+        </form>
+          
+    </mat-card>
+</div>
+
+<!-- <div fxLayoutAlign="center center" fxFlexFill>
+    
+  <mat-card fxFlex="50"  >
+      <mat-toolbar color="accent">
+          Login Page 
+        </mat-toolbar>
+        <br>
+       <form fxLayoutAlign="stretch" fxLayout="column" (ngSubmit)="UserLogin()">
+          <mat-form-field>
+            <mat-label >User email</mat-label>
+            <input type="text" matInput name="email" id="email"  [(ngModel)]="user.email" placeholder="Username">
+          </mat-form-field>
+          <mat-form-field>
+              <mat-label>Password</mat-label>
+           <input matInput name="password" id="password"  [(ngModel)]="user.password" type="password" placeholder="Password" >
+            </mat-form-field>
+            <button mat-raised-button mat-button type="submit">Login</button>
+        </form>
+        
+  </mat-card>
+</div> -->
